@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages cxdxnt
+## Welcome to cxdxnt page 
 
 You can use the [editor on GitHub](https://github.com/cxdxnt/cxdxnt.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
