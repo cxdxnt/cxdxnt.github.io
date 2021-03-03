@@ -1,9 +1,0 @@
-<html>
-<body>
-<h1 align="center" >Mi Primera pagina web </h1>
-<hr>
-<p>Esto tan sencillo es una verdadera página web, aunque le falta el contenido, 
-pero todo llegará.</p>
-</body>
-  <img src="https://cxdxnt.github.io/images/nibbles.png" alt="Girl in a jacket" width="570" height="319">
-</html> 
