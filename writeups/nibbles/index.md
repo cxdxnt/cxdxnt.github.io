@@ -9,7 +9,8 @@ escalada de privilegios, la maquina posee una vulnerabilidad que nos permite la 
 cuenta que tiene una vulnerabilidad CVE-2017-1000112 , que nos permite a traves de una explotacion del kernel acceder a root 
 
 ### Enumeracion 
-Lo primero que hacemos cuando queremos atacar una maquina es enumerarla entonces agarramos la poderosa herramienta nmap y procedemos a enumerarla :D
+Lo primero que hacemos cuando queremos atacar una maquina es enumerarla entonces agarramos la poderosa herramienta nmap y procedemos a enumerarla:D
+
 ![GitHub Logo](/img/nibbles/nmap.PNG)
 
 ```markdown
