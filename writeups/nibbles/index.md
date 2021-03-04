@@ -2,10 +2,11 @@
 
 ![GitHub Logo](/img/nibbles/nibbles.png)
 
+###Detalles
 
-You can use the [editor on GitHub](https://github.com/cxdxnt/cxdxnt.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+El dia de hoy le voy a mostrar la maquina nibbles de hackthebox, es una maquina linux de 64 bits que posee un nivel de dificulta facil en la intrusion y facil en la 
+escalada de privilegios, la maquina posee una vulnerabilidad que nos permite la ejecucion de comandos(RCE) , cuando estamos en la maquinas y la enumeramos , nos damos 
+cuenta que tiene una vulnerabilidad CVE-2017-1000112 , que nos permite a traves de una explotacion del kernel acceder a root 
 
 ### Markdown
 
