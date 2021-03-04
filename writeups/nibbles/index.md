@@ -88,3 +88,4 @@ Ya elevamos privilegio a root :)
 ### Despedida
 
 Gracias por visitar mi pagina si les interesa el tema y quieren aprender pueden preguntarme sin miedo :) adios
+Persona que me ayudaron : Lanz
