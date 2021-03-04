@@ -21,7 +21,8 @@ Lo primero que hacemos cuando queremos atacar una maquina es enumerarla entonces
 Vemos que tiene el puerto 80 , el puerto 80 esta como referido a que corre un sitio web.
 
 Entramos a la pagina y le hechamos un vistazo al codigo fuente y contramos que tiene un directorio nibbleblog
-![GitHub Logo](/img/nibbles/Codigo fuente.PNG)
+
+![GitHub Logo](/img/nibbles/codigo_fuente.PNG)
 
 Ahora que encontramos un directorio voy a usar la herramienta gobuster 
 
