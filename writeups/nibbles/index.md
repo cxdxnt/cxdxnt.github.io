@@ -2,7 +2,7 @@
 
 ![GitHub Logo](/img/nibbles/nibbles.png)
 
-##Detalles
+### Detalles
 
 El dia de hoy le voy a mostrar la maquina nibbles de hackthebox, es una maquina linux de 64 bits que posee un nivel de dificulta facil en la intrusion y facil en la 
 escalada de privilegios, la maquina posee una vulnerabilidad que nos permite la ejecucion de comandos(RCE) , cuando estamos en la maquinas y la enumeramos , nos damos 
