@@ -25,9 +25,10 @@ Entramos a la pagina y le hechamos un vistazo al codigo fuente y contramos que t
 
 ![GitHub Logo](/img/nibbles/codigo_fuente.PNG)
 
-Ahora que encontramos un directorio voy a usar la herramienta gobuster 
+Ahora que encontramos un directorio voy a usar la herramienta gobuster.
 
 ![GitHub Logo](/img/nibbles/gobuster.PNG)
+
 ```
 dir --> Para decirle que queremos hacer un fuzzing a directorios de la web
 -w --> Wordlist a utilizar(Diccionario de palabras que queremos que busque)
