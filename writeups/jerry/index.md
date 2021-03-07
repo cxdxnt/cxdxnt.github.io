@@ -1,2 +1,2 @@
 ## Maquina hackthebox Jerry
-![GitHub Logo](/images/jerry/logo.png)
+![GitHub Logo](/img/jerry/logo.png)
