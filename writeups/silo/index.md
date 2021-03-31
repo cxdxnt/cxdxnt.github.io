@@ -18,4 +18,43 @@ Mediante hydra intentamos encontrar sus SID
 
 ![GitHub Logo](/img/silo/enumeracion-sid.PNG)
 
-Una vez obtenido el SID probamos a intentar iniciar session con contraseñas por default
+Una vez obtenido el SID probamos a intentar iniciar session con contraseñas por default , en este caso scott y tiger son el usuario y contraseña correctos
+
+![GitHub Logo](/img/silo/connect oracle.PNG)
+
+```markdown
+as sysdba --> Es para poder entrar con un usuario con mas alto privilegios 
+
+```
+
+Una vez dentro nos creamos un usuario llamado cxdxnt 
+![GitHub Logo](/img/silo/creando y elevando privilegios.PNG)
+```markdown
+CREATE USER  cxdxnt  IDENTIFIED BY cxdxnt#; ---> Crea un usuario
+GRANT CONNECT , RESOURCE ,DBA TO cxdxnt --->  CONNECT para que el usuario pueda conectarse.RESOURCE (permitite al usuario crear tipos con nombre para esquemas personalizados)
+                                              DBA  le permite al usuario no solo crear tipos con nombre personalizados, sino también modificarlos y destruirlos.
+```
+
+### ATAQUE:
+
+Una vez creado al usuario , con la herramienta odat subimos una web shell 
+![GitHub Logo](/img/silo/subiendo la web shell.PNG)
+## Web shell
+![GitHub Logo](/img/silo/mostrando la web shell.PNG)
+
+Una vez subida la web shell procedemos a traer el backdoor
+![GitHub Logo](/img/silo/trayendo la web shell a content.PNG)
+
+Despues de a ver traido el backdoor desde la web shell , lo descargamos.
+
+![GitHub Logo](/img/silo/descargando y ejecutando la reverse shell.PNG)
+
+Y exito ya estamos dentro de la maquina :D
+
+![GitHub Logo](/img/silo/acceso a la maquina.PNG)
+### Elevacion de privilegios
+
+
+
+
+
