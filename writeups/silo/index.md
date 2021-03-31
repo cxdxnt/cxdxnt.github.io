@@ -16,6 +16,6 @@ Lanzamos nmap para enumerar los puertos y sus servicios que corren.Luego de que 
 Buscando en internet encontre que para autenticarse con la base de datos necesitamos los sid.Los SID son  una instancia de base de datos única
 Mediante hydra intentamos encontrar sus SID
 
-![GitHub Logo](/img/silo/enumeracion-sid.png)
+![GitHub Logo](/img/silo/enumeracion-sid.PNG)
 
 Una vez obtenido el SID probamos a intentar iniciar session con contraseñas por default
