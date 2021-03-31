@@ -81,7 +81,7 @@ Y vamos resulta que hay un hash para ingresar como administrator a la maquina.
 
 Mediante cuya herramienta procedemos a conectarnos 
 
-![GitHub Logo](/img/silo/connectarse a administrator y mostrar flag.PNG)
+![GitHub Logo](/img/silo/connectarse a administrador y mostrar la flag.PNG)
 
 Y listo ya tenemos acceso como administrator :)
 
