@@ -11,7 +11,7 @@ hashes , que gracias a esos hashes iniciamos session como administrador.
 ### Enumeracion 
 
 Lanzamos nmap para enumerar los puertos y sus servicios que corren.Luego de que terminara el escaneo , veo que hay un servidor 1521 que corre el servicio oracle, me llamo bastante la atencion por su (unathorized), entonces fui directo a internet a buscar informacion de aquel puerto.
-![GitHub Logo](/img/silo/nmap.png)
+![GitHub Logo](/img/silo/nmap.PNG)
 
 Buscando en internet encontre que para autenticarse con la base de datos necesitamos los sid.Los SID son  una instancia de base de datos única
 Mediante hydra intentamos encontrar sus SID
