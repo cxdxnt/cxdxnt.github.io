@@ -78,6 +78,7 @@ Una vez viendo que hay archivos procedemos a ver si algun hash
 Y vamos resulta que hay un hash para ingresar como administrator a la maquina.
 
 ##Evil-winrm
+
 Mediante cuya herramienta procedemos a conectarnos 
 
 ![GitHub Logo](/img/silo/connectarse a administrator y mostrar flag.PNG)
