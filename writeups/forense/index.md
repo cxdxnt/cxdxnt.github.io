@@ -1,6 +1,6 @@
 ### Welcome to cxdxnt page 
 
-![GitHub Logo](/img/forense/insiden/descripcion.PNG)
+![GitHub Logo](/img/forense/insiden/descripsion.PNG)
 
 ## Detalles 
 Hoy nos pegamos un descanso de hacking y nos vamos al forense , este reto consiste en una amenaza , unos ciberdelicuentes entraron a una empresa y los CEOS quieren averiguar que informacion obtuvieron.Entonces mediante tecnicas forense vamos a ir a veriguarlo :). 
