@@ -9,13 +9,13 @@ Hoy nos pegamos un descanso de hacking y nos vamos al forense , este reto consis
 
 Una vez descomprimimos el archivo ,pasamos a buscar la carpeta Profile , ¿Porque la carpeta Profile? Basicamente por que ahi se almacenan las contraseñas y las busquedas que ha hecho el usuario.Logramos encontrarlo :D 
 
-![GitHub Logo](/img/forense/insiden/buscar archivo profile.PNG)
+![GitHub Logo](/img/forense/insiden/buscarArchivoProfile.PNG)
 
 ### Buscamos password y history.
 
 Una vez encontramos el archivo profile , nos centramos en el archivo 2542z9mo.default-release.Empezamos a fijarnos que se ha fijado dicho usuario malisioso.
 
-![GitHub Logo](/img/forense/insiden/buscar history.PNG)
+![GitHub Logo](/img/forense/insiden/buscarHistory.PNG)
 
 Vemos ha accedido a un panel de login.¿Como lo sabemos? En tomcat se usa la ruta manager para acceder a una cuenta , entonces damos por entender que ha robado credenciales.Ahora pasamos a ver que contraseñas se ha llevado dicho usuario. 
 
