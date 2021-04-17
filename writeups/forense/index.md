@@ -13,7 +13,7 @@ Una vez descomprimimos el archivo ,pasamos a buscar la carpeta Profile , ¿Porqu
 
 ### Buscamos password y history.
 
-Una vez encontramos el archivo profile , nos centramos en el archivo 2542z9mo.default-release.Empezamos a fijarnos que se ha fijado dicho usuario malisioso.
+Una vez encontramos el archivo profile , nos centramos en el archivo 2542z9mo.default-release.Empezamos a fijarnos que ha buscado dicho usuario malisioso.
 
 ![GitHub Logo](/img/forense/insiden/buscarHistory.PNG)
 
