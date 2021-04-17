@@ -27,3 +27,4 @@ Encontramos dos cadenas de texto cifradas, mediante la herramienta firefox_decry
 
 Y listo logramos ver la flag y hemos completado el reto :)
 
+### Challeger insider write up
