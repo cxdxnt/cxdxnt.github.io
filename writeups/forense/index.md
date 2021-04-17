@@ -21,7 +21,7 @@ Vemos ha accedido a un panel de login.¿Como lo sabemos? En tomcat se usa la rut
 
 ![GitHub Logo](/img/forense/insiden/buscando password.PNG)
 
-Encontramos dos cadenas de texto cifradas, mediante la herramienta firefox_decryp , vamos a descifrarlasa :)
+Encontramos dos cadenas de texto cifradas.Mediante la herramienta firefox_decryp  vamos a descifrarlas :)
 
 ![GitHub Logo](/img/forense/insiden/decryp.PNG)
 
