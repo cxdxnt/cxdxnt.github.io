@@ -9,7 +9,7 @@ Hoy nos pegamos un descanso de hacking y nos vamos al forense , este reto consis
 
 Una vez descomprimimos el archivo ,pasamos a buscar la carpeta Profile , ¿Porque la carpeta Profile? Basicamente por que ahi se almacenan las contraseñas y las busquedas que ha hecho el usuario.Logramos encontrarlo :D 
 
-![GitHub Logo](/img/forense/insiden/Buscar archivo profile.PNG)
+![GitHub Logo](/img/forense/insiden/buscar archivo profile.PNG)
 
 ### Buscamos password y history.
 
