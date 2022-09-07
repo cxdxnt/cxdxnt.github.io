@@ -2,7 +2,7 @@
 layout: single
 title: bashed - Hack The Box
 excerpt: "Bashed es una maquina sensilla que cuenta con una webshell expuesta en la web, luego de ganar acceso a la maquina vemos que el usuario www-data tiene permiso de ejecutar comandos como scriptmanager.Luego para la escala de privilegios a root vemos que el usuario root esta ejecutando el archivo test.py"
-date: 2022-09-06
+date: 2022-09-6
 classes: wide
 header:
   teaser: /assets/images/htb-writeup-bashed/bashed_logo.png
