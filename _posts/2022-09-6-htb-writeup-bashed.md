@@ -1,7 +1,7 @@
 ---
 layout: single
 title: bashed - Hack The Box
-excerpt: "Bashed es una maquina sensilla que cuenta con una webshell expuesta en la web, luego de ganar acceso a la maquina vemos que el usuario www-data tiene permiso de ejecutar comandos como scriptmanager.Luego para la escala de privilegios a root vemos que el usuario root esta ejecutando el archivo test.py"
+excerpt: "Bashed es una máquina sencilla que cuenta con una webshell expuesta en la web, luego de ganar acceso a la máquina vemos que el usuario www-data tiene permiso de ejecutar comandos como scriptmanager. Luego para la escala de privilegios a root vemos que el usuario root está ejecutando el archivo test.py"
 date: 2022-09-6
 classes: wide
 header:
@@ -18,8 +18,7 @@ tags:
 ---
 ![](/assets/images/htb-writeup-bashed/bashed_logo.png)
 
-Bashed es una maquina sensilla que cuenta con una webshell expuesta en la web,luego de ganar acceso a la maquina vemos que el usuario www-data tiene permiso de jecutar comandos como scriptmanager.Luego para la escala de privilegios a root vemos que el usuario root esta ejecutando el archivo test.py
-procedemos a modificarlo y ganar acceso como el usuario root.
+Bashed es una máquina sencilla que cuenta con una webshell expuesta en la web, luego de ganar acceso a la máquina vemos que el usuario www-data tiene permiso de ejecutar comandos como scriptmanager. Luego para la escala de privilegios a root vemos que el usuario root está ejecutando el archivo test.py, procedemos a modificarlo y ganar acceso como el usuario root.
 
 ## Enumeracion 
 
@@ -37,12 +36,13 @@ PORT   STATE SERVICE VERSION
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 13.80 seconds
 ```
-Navegamos por la web, y vemos que en la ruta "http://10.10.10.68/dev/phpbash.php" esta subida una web shell.
+
+Navegamos por la web, y vemos que en la ruta “http://10.10.10.68/dev/phpbash.php” está subida una web shell.
 
 ![](/assets/images/htb-writeup-bashed/shell.png)
 
 ## Escalada de privilegios
-La escalada de privilegios es bastante facil, como el usuario www-data ejecutamos ``` sudo -l ``` y vemos que tiene permisos de ejecutar comandos como el usuario scriptmanager.
+La escalada de privilegios es bastante fácil, como el usuario www-data ejecutamos ``` sudo -l ``` y vemos que tiene permisos de ejecutar comandos como el usuario scriptmanager.
 
 
 ```bash
@@ -55,7 +55,7 @@ User www-data may run the following commands on bashed:
 www-data@bashed:/tmp$ sudo -u  scriptmanager bash
 scriptmanager@bashed:/tmp$ 
 ```
-Ahora toca escalar a root :).Con el pspy vemos que a intervalos de tiempo root ejecuta una tarea cron.Lo que hace es simplemente ejecutar el script test.py 
+Ahora toca escalar a root :). Con el pspy vemos que a intervalos de tiempo root ejecuta una tarea cron. Lo que hace es simplemente ejecutar el script test.py
 
 ```bash
 2022/09/07 05:56:01 CMD: UID=0    PID=15383  | python test.py 

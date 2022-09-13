@@ -141,7 +141,7 @@ Creator                         : nico@megabank.com
     3 image files read
 ```
 
-Encontramos un correo electronico.Comprobamos si existe el usuario
+Encontramos un correo electrónico. Comprobamos si existe el usuario.
 
 ```bash
 
@@ -160,9 +160,10 @@ RCPT TO:nico@megabank.com
 250 OK
 ```
 ## Rce 
-Segun el archivo readme.txt el email nico@megabank.com solo va abrir los archivos que tengan la extension .rtf , entonces procedemos a buscar como crear un archivo rtf malisioso.Nos encontramos con esta herramienta.
 
-![]/assets/imagenes/htb-writeup-reel/vulnerabilidad.png)
+Según el archivo readme.txt el email nico@megabank.com solo va a abrir los archivos que tengan la extensión .rtf , entonces procedemos a buscar como crear un archivo rtf malicioso. Nos encontramos con esta herramienta.
+
+![](/assets/images/htb-writeup-reel/vulnerabilidad.png)
 
 Para ganar acceso al sistema tenemos que hacer lo siguiente.
 
@@ -219,13 +220,14 @@ htb\tom
 
 tom@REEL C:\Users\tom> 
 ```
-Vemos un acls.csv y lo traemos a nuestra maquina.
+Vemos un acls.csv y lo traemos a nuestra maquiná.
 
 ![](/assets/images/htb-writeup-reel/acls.png)
 
 Hacemos un filter por la palabra tom en el principalName, y nos encontramos lo siguiente.
 ![](/assets/images/htb-writeup-reel/filtrar.png)
-Vemos que tiene el permiso writeowner, que esta vulnerabilidad permite cambiarle la contraseña a un usuario en este caso a claire.Buscamos informacion por internet y procedemos a ser lo siguiente.
+
+Vemos que tiene el permiso writeowner, que esta vulnerabilidad permite cambiarle la contraseña a un usuario, en este caso a claire. Buscamos información por internet y procedemos a ser lo siguiente.
 
 ```powershell
 PS C:\Users\tom\Desktop\AD Audit\BloodHound> Set-DomainObjectOwner -identity claire -OwnerIdentity tom                          
@@ -237,9 +239,12 @@ PS C:\Users\tom\Desktop\AD Audit\BloodHound>
 ```
 
 Estamos como claire.
+
 ![](/assets/images/htb-writeup-reel/claire.png)
 
 Ahora procedemos a agregar a claire al grupo backups_admin.
+
+
 ```powershell
 PS C:\Users\claire\Desktop> net group Backup_Admins claire /add                                                                 
 The command completed successfully.                                                                                             
@@ -251,7 +256,7 @@ Logramos entrar a la carpeta admin.
 
 ## Fase final:
 
-Entramos en la carpeta Desktop\Backups, y encontramos muchos script.
+Entramos en la carpeta Desktop\Backups, y encontramos muchos scripts.
 
 ```powershell
 PS C:\Users\Administrator\Desktop\Backup Scripts> dir                                                                           
@@ -274,7 +279,7 @@ PS C:\Users\Administrator\Desktop\Backup Scripts>
 
 ```
 
-Procedemos a ser un filtrado por una palabra clave y encontramos :
+Procedemos a ser un filtrado por una palabra clave y encontramos:
 
 ```powershell
 
