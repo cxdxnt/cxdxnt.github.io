@@ -24,7 +24,7 @@ Maquina: Writer.
 Vulnerabilidad: Sql injection union based
 Escalada de privilegios: Escalando de www-data a Kyle descifrando hashes en la base de datos,Escalating from Kyle to John by poisoning postfix/disclaimer file,Escalando de John a root mediante la explotación de apt-get
 
-## Enumeracion
+## Enumeración
 Para comenzar aplicamos una simple enumeracion para saber con lo que nos estamos enfrentando.
 ```ruby
 Starting Nmap 7.92 ( https://nmap.org ) at 2022-09-03 10:38 -03

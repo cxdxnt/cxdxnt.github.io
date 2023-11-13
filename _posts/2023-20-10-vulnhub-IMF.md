@@ -21,7 +21,7 @@ tags:
 IMF es una máquina disponible en VulnHub que presenta una vulnerabilidad de carga de archivos, lo que permite la ejecución de código PHP. Posteriormente, la escalada de privilegios se basa en una vulnerabilidad de código que posibilita el desbordamiento del búfer, otorgándonos acceso a una shell como usuario root.
 
 
-## Enumeracion
+## Enumeración
 
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios.
 

@@ -20,7 +20,7 @@ tags:
 
 Symfonos2 es una máquina vulnerable de la plataforma vulnhub. Que se centra en un servicio SAMBA que filtra información de un usuario del sistema, por lo que se procede a inicializar fuerza bruta, ya que el usuario contiene credenciales débiles. Seguido de una escalada de privilegios de2 fases, La primera es dirigida a cronos que tiene inicializado un servicio web corriendo "librenms" que es vulnerable a ejecución de código. La segunda fase es al usuario root desde el usuario cronos que posee privilegios para ejecutar mysql como "root".
 
-## Enumeracion
+## Enumeración
 
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios.
 

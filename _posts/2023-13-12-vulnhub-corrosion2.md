@@ -20,7 +20,7 @@ tags:
 
 Corrosion2, una máquina vulnerable de VulnHub, presenta una vulnerabilidad que expone un archivo zip con archivos de configuración. Aprovechamos uno de esos archivos para ingresar a Tomcat y obtener acceso. Posteriormente, la escalada de privilegios se produce debido a la reutilización de contraseñas y una gestión deficiente de los permisos en archivos.
 
-## Enumeracion
+## Enumeración
 
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios.
 

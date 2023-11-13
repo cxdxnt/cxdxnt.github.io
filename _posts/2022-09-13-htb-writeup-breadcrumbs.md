@@ -22,7 +22,7 @@ tags:
 
 Breadcrumbs comienza con una cantidad de enumeración web. Primero filtramos la fuente de la página con una vulnerabilidad transversal de directorio y la usamos para obtener los algoritmos necesarios para falsificar tanto una cookie de sesión como un token JWT. Con ambas cookies, obtenemos acceso de administrador al sitio y podemos cargar una webshell después de omitir algunos filtros y Windows Defender. Encontrarémos los datos del próximo usuario en los archivos del sitio web. Encontrarémos otra contraseña en los datos de Sticky Notes que la usaré para obtener acceso al administrador de contraseñas en desarrollo. Para llegar al administrador, exploramos una inyección de SQL en el administrador de contraseñas para obtener la contraseña cifrada y el material clave para descifrarla, proporcionando la contraseña de administrador.
 
-## Enumeracion 
+## Enumeración 
 Empezamos con un simple nmap.
 
  ```bash

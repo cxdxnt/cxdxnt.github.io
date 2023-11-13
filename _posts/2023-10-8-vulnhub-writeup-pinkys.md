@@ -19,7 +19,7 @@ tags:
 
 Pinkys es una máquina fácil, que contiene una vulnerabilidad que reside de una mala configuración de montaje, que nos permite comprometer la máquina. La elevación de privilegios consiste en una incorrecta gestión de permisos de archivos, esto nos permite ejecutar comandos como root.
 
-## Enumeracion
+## Enumeración
 
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios(ssh,rpcbind,nfs,mountd,nlockmgr).
 

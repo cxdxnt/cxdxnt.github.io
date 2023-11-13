@@ -19,7 +19,7 @@ tags:
 
 "JOY" es una máquina vulnerable disponible en VulnHub que presenta una vulnerabilidad de fuga de información en el servidor FTP. Esta vulnerabilidad nos permite utilizar el protocolo TFTP para acceder al contenido de archivos, lo que, a su vez, nos brinda la oportunidad de identificar las versiones del software involucrado. Es importante destacar que la versión ProFTPD 1.3.5 se encuentra vulnerable a una técnica de subida de archivos que aprovecharemos para cargar una webshell. Posteriormente, la escalación de privilegios se basa en la exposición de una contraseña y una configuración incorrecta de los scripts de bash.
 
-## Enumeracion
+## Enumeración
 
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios.
 

@@ -21,7 +21,7 @@ tags:
 Symfonos 1 es una máquina que contempla una vulnerabilidad llamada LFI(Local File Inclusion) que nos permite ganar acceso remoto a la máquina. Luego la escalada de privilegios es directamente a root por una mala configuraciónde permisos de archivos y una forma incorrecta de llamar al archivo "curl".
 
 
-## Enumeracion
+## Enumeración
 
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios.
 

@@ -20,7 +20,7 @@ tags:
 Symfonos6, una máquina vulnerable en VulnHub, presenta una vulnerabilidad XSS que nos habilita para crear un usuario con privilegios elevados, que  permite ver un sector en el que se aloja credenciales válidas para gitea. Posteriormente, aprovechamos los hooks para la ejecución de comandos. Una vez dentro del sistema, accedemos con las credenciales de 'achilles', ya que se reutilizan contraseñas. La escalada a root se logra debido a una configuración incorrecta de los permisos en el archivo sudoers.
 
 
-## Enumeracion
+## Enumeración
 
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios.
 

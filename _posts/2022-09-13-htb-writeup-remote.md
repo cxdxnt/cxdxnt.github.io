@@ -23,7 +23,7 @@ tags:
 La máquina de hoy consiste en una mala configuración que deja expuesto una carpeta web del sistema. Gracias a dicha carpeta logramos extraer la versión de la aplicación y la contraseña de admin. Después la escalada consiste a través de un SeImpersonatePrivilege que consiste en poder ejecutar cualquier comando como nt authority.
 
 
-## Enumeracion
+## Enumeración
 Comenzamos con un nmap.
 ```rb
 nmap -sCV -p21,80,111,135,139,445,2049,5985,47001,49664,49665,49666,49667,49678,49679,49680 10.10.10.180 -oN targeted

@@ -20,7 +20,7 @@ tags:
 
 Symfonos3, una máquina virtual de Vulnhub, presenta una vulnerabilidad conocida como Shellshock que nos permitió obtener acceso al sistema. Para la escalada de privilegios,  iniciamos como cerberus y nos infiltramos con el usuario 'hades' al interceptar el tráfico de la máquina. Posteriormente, logramos la escalación a root aprovechando un error de permisos en una biblioteca de Python, también conocido como librari hijacking.
 
-## Enumeracion
+## Enumeración
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios.
 
 ```bash

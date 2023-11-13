@@ -22,7 +22,7 @@ tags:
 
 Monitors comienza con un WordPress que es vulnerable a un plugin local que incluye una vulnerabilidad que me permite leer archivos del sistema. Al hacerlo, descubrimos otro dominio que sirva una versión vulnerable de Cacti, que explotaremos mediante inyección SQL que conduce a la ejecución del código. A partir de ahí, identificamos un nuevo servicio en desarrollo que ejecute Apache ofbiz en un contenedor Docker y lo usamos para ingresar al contenedor. El contenedor se ejecuta con privilegios, de lo que abusaremos al instalar un módulo de kernel malicioso para obtener acceso como root en el host.
 
-## Enumeracion
+## Enumeración
 
 ```ruby
  nmap -sCV -p22,80 10.10.10.238 -oN targeted

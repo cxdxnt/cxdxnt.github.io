@@ -21,7 +21,7 @@ tags:
 
 Hoy nos enfrentamos contra Chatterbox que es una máquina Windows que ejecuta un cliente de chat web vulnerable a desbordamientos de búfer remotos. Esta vulnerabilidad se aprovechó para obtener una reverse shell en el host y obtener los indicadores de usuario y root debido a permisos débiles o mal configurados.
 
-## Enumeracion
+## Enumeración
 
 Empezamos con una simple reconocimiento con nmap,al ejecutarlo podemos ver que corre un servicio achat.
 

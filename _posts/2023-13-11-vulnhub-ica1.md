@@ -20,7 +20,7 @@ tags:
 Ica-1 es una máquina vulnerable de VulnHub que presenta una vulnerabilidad que nos permite visualizar archivos críticos de la configuración a través de la base de datos MySQL. Una vez dentro de la base de datos, identificamos una tabla que contiene usuarios y contraseñas, que exploramos con Hydra para verificar la validez de las credenciales. La escalada de privilegios se basa en un mal manejo al llamar a programas.
 
 
-## Enumeracion
+## Enumeración
 
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios.
 

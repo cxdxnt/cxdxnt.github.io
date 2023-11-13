@@ -21,7 +21,7 @@ Symfonos5, una máquina vulnerable de VulnHub, presenta una vulnerabilidad de in
 
 
 
-## Enumeracion
+## Enumeración
 
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios.
 

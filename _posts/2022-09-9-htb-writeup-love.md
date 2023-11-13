@@ -20,7 +20,7 @@ tags:
 
 Empezamos con love que es una máquina de calificación media, en la cual contiene una vulnerabilidad ssrf, gracias a cuya vulnerabilidad logramos extraer una contraseña que nos sirve para ingresar al panel de administración. Una vez dentro logramos insertar una webshell, una vez dentro de la máquina la elevación de privilegios consiste en la carga de un archivo msi malicioso.
 
-## Enumeracion
+## Enumeración
 
 Lanzamos un simple reconocimiento con nmap.
 ```ruby

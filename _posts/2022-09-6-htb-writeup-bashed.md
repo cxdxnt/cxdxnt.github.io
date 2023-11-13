@@ -20,7 +20,7 @@ tags:
 
 Bashed es una máquina sencilla que cuenta con una webshell expuesta en la web, luego de ganar acceso a la máquina vemos que el usuario www-data tiene permiso de ejecutar comandos como scriptmanager. Luego para la escala de privilegios a root vemos que el usuario root está ejecutando el archivo test.py, procedemos a modificarlo y ganar acceso como el usuario root.
 
-## Enumeracion 
+## Enumeración 
 
 Lanzamos un simple escaneo de nmap y encontramos que tiene solamente el puerto 80 abierto.
 ```ruby

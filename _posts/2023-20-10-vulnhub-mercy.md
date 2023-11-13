@@ -19,7 +19,7 @@ tags:
 
 Durante la evaluación de seguridad en la máquina virtual 'Mercy' de Vulnhub, se identificó una vulnerabilidad relacionada con credenciales débiles, lo cual permitió la autenticación en el servicio SMB (Samba). Una vez dentro del sistema SMB, se descubrió un archivo que contenía múltiples configuraciones, incluyendo datos de 'Knocking.conf'. Estos datos proporcionaron acceso al puerto HTTP, donde se identificó una vulnerabilidad de inclusión de archivos locales (LFI) en una aplicación RIPS. Aprovechando esta vulnerabilidad, se logró obtener acceso a un archivo llamado 'tomcat-users.xml', que contenía credenciales de inicio de sesión para el servicio Tomcat. Utilizando estas credenciales, se accedió exitosamente al sistema y posteriormente se logró la escalada de privilegios a la cuenta de administrador 'root', aprovechando una mala configuración presente en un archivo específico
 
-## Enumeracion
+## Enumeración
 
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios.
 
