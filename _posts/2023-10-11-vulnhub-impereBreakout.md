@@ -20,7 +20,7 @@ tags:
 Impere-breakout es una máquina vulnerable en VULNHUB. En este escenario, nos enfrentamos a una contraseña ofuscada mediante lenguaje esotérico. Posteriormente, nuestro objetivo es descubrir un usuario correspondiente a la contraseña encontrada. En este proceso, utilizaremos rpcclient para identificar un usuario válido.Después, aprovecharemos la capacidad (capability) cap_dac_read_search para acceder como usuario root.
 
 
-## Enumeracion
+## Enumeración
 
 Empezamos con un reconocimiento de puertos y servicios a través de la herramienta nmap. En el cual logramos detectar varios servicios.
 
